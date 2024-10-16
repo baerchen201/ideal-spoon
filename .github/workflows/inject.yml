@@ -1,0 +1,13 @@
+on:
+  workflow_call:
+
+jobs:
+  inject:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Clear current directory
+        run: rm -rf ./*
+      - name: Download ideal-spoon repo
+        uses: actions/checkout@v4
+        with:
+          repository: baerchen201/ideal-spoon
